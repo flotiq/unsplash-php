@@ -55,15 +55,20 @@ class HttpClient
     public function __construct()
     {
         $envPath = __DIR__ . '/../tests/';
-        if (class_exists('\Dotenv\Dotenv') && file_exists($envPath . ".env")) {
+        $config = [];
+        if (class_exists('\Dotenv\Dotenv')) {
             $dotenv = \Dotenv\Dotenv::createImmutable($envPath);
             $dotenv->load();
 
-            $this->scheme = getenv('HTTP_SCHEME');
-            $this->host = 'api.' . getenv('HOST');
+            $unsplashProxyUrl = getenv('UNSPLASH_PROXY_URL');
+            if ($unsplashProxyUrl) {
+                $this->host = $unsplashProxyUrl;
+                $config['proxy'] = $unsplashProxyUrl;
+            }
         }
 
-        $this->httpClient = new Client(['handler' => $this->setHandler(self::$connection->getAuthorizationToken())]);
+        $config['handler'] = $this->setHandler(self::$connection->getAuthorizationToken());
+        $this->httpClient = new Client($config);
     }
 
     /**
