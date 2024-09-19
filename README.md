@@ -1,11 +1,9 @@
 # PHP Unsplash Wrapper
 
-[![Build Status](https://travis-ci.org/unsplash/unsplash-php.svg?branch=master)](https://travis-ci.org/unsplash/unsplash-php)
-
 A PHP client for the [Unsplash API](https://unsplash.com/documentation).
 
 - [Official documentation](https://unsplash.com/documentation)
-- [Changelog](https://github.com/unsplash/unsplash-pHP/blob/master/CHANGELOG.md)
+- [Changelog](https://github.com/flotiq/unsplash-pHP/blob/master/CHANGELOG.md)
 
 Quick links to methods you're likely to care about:
 
@@ -713,4 +711,4 @@ $user->statistics('days', 7);
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/unsplash/unsplash-php. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org/) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/flotiq/unsplash-php. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org/) code of conduct.
