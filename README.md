@@ -21,7 +21,7 @@ Quick links to methods you're likely to care about:
 `unsplash-php` uses [Composer](https://getcomposer.org/). To use it, require the library
 
 ```
-composer require unsplash/unsplash
+composer require flotiq/unsplash
 ```
 
 ## Usage
