@@ -58,7 +58,6 @@ class HttpClient
 
         $unsplashProxyUrl = getenv('UNSPLASH_PROXY_URL');
         if ($unsplashProxyUrl) {
-            $this->host = $unsplashProxyUrl;
             $config['proxy'] = $unsplashProxyUrl;
         }
 
